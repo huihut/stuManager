@@ -8,7 +8,7 @@
 
 ## 运行截图
 
-![stuManagerScreenshot](http://ojlsgreog.bkt.clouddn.com/stuManagerScreenshot.png)
+![stuManagerScreenshot](http://ojlsgreog.bkt.clouddn.com/stuManageScreenshot.jpg)
 
 ## 运行环境
 * [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
