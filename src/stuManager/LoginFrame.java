@@ -58,10 +58,10 @@ public class LoginFrame extends JFrame {
 		contentPane = (JPanel) getContentPane();
 		contentPane.setLayout(null);
 		setSize(new Dimension(504, 344));
-		setTitle("欢迎登陆学生管理系统");
+		setTitle("欢迎登录学生管理系统");
 		jLabel_welcomeTitle.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_welcomeTitle.setToolTipText("");
-		jLabel_welcomeTitle.setText("欢  迎  登  陆  学  生");
+		jLabel_welcomeTitle.setText("欢  迎  登  录  学  生");
 		jLabel_welcomeTitle.setBounds(new Rectangle(128, 19, 246, 30));
 		jLabel_systemTitle.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_systemTitle.setToolTipText("");
@@ -79,7 +79,7 @@ public class LoginFrame extends JFrame {
 		jButton_Login.setBounds(new Rectangle(124, 243, 93, 30));
 		jButton_Login.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
 		jButton_Login.setBorder(BorderFactory.createRaisedBevelBorder());
-		jButton_Login.setText("登  陆");
+		jButton_Login.setText("登  录");
 		jButton_Login.addActionListener(new LoginFrame_jButton_Login_actionAdapter(this));
 		jButton_quit.setBounds(new Rectangle(286, 243, 93, 30));
 		jButton_quit.setFont(new java.awt.Font("Dialog", Font.PLAIN, 13));
@@ -94,7 +94,7 @@ public class LoginFrame extends JFrame {
 		jLabel_welcomeTitle2.setFont(new java.awt.Font("Dialog", Font.BOLD, 25));
 		jLabel_welcomeTitle2.setForeground(Color.blue);
 		jLabel_welcomeTitle2.setToolTipText("");
-		jLabel_welcomeTitle2.setText("欢  迎  登  陆  学  生");
+		jLabel_welcomeTitle2.setText("欢  迎  登  录  学  生");
 		jLabel_welcomeTitle2.setBounds(new Rectangle(128, 20, 246, 30));
 		jOptionPane_LoginFeedback.setBounds(new Rectangle(28, 263, 262, 90));
 		jOptionPane_LoginFeedback.setLayout(null);

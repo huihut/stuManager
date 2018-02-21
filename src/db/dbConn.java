@@ -27,7 +27,7 @@ public class dbConn {
 			// 数据库名称，管理员账号、密码
 			String url = "jdbc:mysql://localhost:3306/stuManagerDB";
 			String user = "root";
-			String pwd = "stu123";
+			String pwd = "123";
 
 			// 连接
 			Connection con = null;

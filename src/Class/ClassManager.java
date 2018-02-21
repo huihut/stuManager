@@ -7,6 +7,8 @@ import com.borland.jbcl.layout.XYLayout;
 import db.dbConn;
 
 import com.borland.jbcl.layout.*;
+import stuManager.MainFrame;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.*;
@@ -119,7 +121,7 @@ public class ClassManager extends JFrame {
 		jButton5.setText("删  除");
 		jButton5.addActionListener(new ClassManager_jButton5_actionAdapter(this));
 		jButton6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton6.setText("退  出");
+		jButton6.setText("返  回");
 		jButton6.addActionListener(new ClassManager_jButton6_actionAdapter(this));
 		jPanel1.add(jRadioButton2, new XYConstraints(20, 50, 125, 25));
 		jPanel1.add(jRadioButton3, new XYConstraints(20, 130, 125, 25));
@@ -147,6 +149,19 @@ public class ClassManager extends JFrame {
 		this.getContentPane().add(jButton6, new XYConstraints(340, 480, 90, 35));
 		jComboBox1.addItem("请选择学院");
 		jComboBox2.addItem("请选择学院");
+
+		// 用户等级判断
+		// 1为管理员
+		if (MainFrame.level.equals("1")) {
+			// 不隐藏任何功能
+		}
+		// 2为普通用户
+		else if (MainFrame.level.equals("2")) {
+			// 隐藏部分功能
+			jButton4.setVisible(false);
+			jButton5.setVisible(false);
+		}
+
 		// 选择学院
 		try {
 

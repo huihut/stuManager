@@ -5,6 +5,7 @@ import java.awt.*;
 import com.borland.jbcl.layout.*;
 
 import db.dbConn;
+import stuManager.MainFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -60,7 +61,7 @@ public class DepartManager extends JFrame {
 		jButton5.setText("删  除");
 		jButton5.addActionListener(new DepartManager_jButton5_actionAdapter(this));
 		jButton6.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton6.setText("退  出");
+		jButton6.setText("返  回");
 		jButton6.addActionListener(new DepartManager_jButton6_actionAdapter(this));
 		this.getContentPane().add(jLabel1, new XYConstraints(177, 14, 177, 39));
 		jScrollPane1.getViewport().add(jTable1);
@@ -68,6 +69,19 @@ public class DepartManager extends JFrame {
 		this.getContentPane().add(jButton4, new XYConstraints(100, 480, 90, 35));
 		this.getContentPane().add(jButton5, new XYConstraints(220, 480, 90, 35));
 		this.getContentPane().add(jButton6, new XYConstraints(340, 480, 90, 35));
+
+		// 用户等级判断
+		// 1为管理员
+		if (MainFrame.level.equals("1")) {
+			// 不隐藏任何功能
+		}
+		// 2为普通用户
+		else if (MainFrame.level.equals("2")) {
+			// 隐藏部分功能
+			jButton4.setVisible(false);
+			jButton5.setVisible(false);
+		}
+
 		// 选择专业表
 		sql = "select * from tb_spec";
 		// 刷新

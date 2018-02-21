@@ -7,6 +7,8 @@ import com.borland.jbcl.layout.XYLayout;
 import db.dbConn;
 
 import com.borland.jbcl.layout.*;
+import stuManager.MainFrame;
+
 import javax.swing.*;
 import java.sql.ResultSet;
 import java.awt.event.ActionEvent;
@@ -59,7 +61,7 @@ public class CourceManager extends JFrame {
 		jButton1.setText("修   改");
 		jButton1.addActionListener(new CourceF_jButton1_actionAdapter(this));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton2.setText("退   出");
+		jButton2.setText("返   回");
 		jButton2.addActionListener(new CourceF_jButton2_actionAdapter(this));
 		xYLayout1.setWidth(550);
 		xYLayout1.setHeight(560);
@@ -73,6 +75,19 @@ public class CourceManager extends JFrame {
 		this.getContentPane().add(jButton2, new XYConstraints(374, 480, 100, -1));
 		this.getContentPane().add(jScrollPane1, new XYConstraints(18, 60, 490, 400));
 		this.getContentPane().add(jButton6, new XYConstraints(224, 480, 100, -1));
+
+		// 用户等级判断
+		// 1为管理员
+		if (MainFrame.level.equals("1")) {
+			// 不隐藏任何功能
+		}
+		// 2为普通用户
+		else if (MainFrame.level.equals("2")) {
+			// 隐藏部分功能
+			jButton1.setVisible(false);
+			jButton6.setVisible(false);
+		}
+
 		sql = "select * from tb_cource ";
 		UpdateRecord();
 

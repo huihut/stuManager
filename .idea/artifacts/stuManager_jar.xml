@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="stuManager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/stuManager_jar</output-path>
+    <root id="archive" name="stuManager.jar">
+      <element id="module-output" name="stuManager" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JSpaces.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/mysql-connector-java-5.1.18.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

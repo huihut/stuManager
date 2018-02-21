@@ -33,9 +33,8 @@ import User.UserPasswordFrame;
 
 public class MainFrame extends JFrame {
 	JPanel contentPane;
-	String level, Sid;
+	public static String level;
 	static String name;
-	int find;
 	
 	URL url = getClass().getResource("/img/bg.jpg");
 	ImageIcon mainBg = new ImageIcon(url);
@@ -102,7 +101,7 @@ public class MainFrame extends JFrame {
 		contentPane.setLayout(null);
 		this.setJMenuBar(jMenuBar);
 		setSize(new Dimension(911, 698));
-		setTitle("欢迎登陆学生管理系统");
+		setTitle("欢迎登录学生管理系统");
 
 		jLabel_welcomeTitle.setText("欢 迎 使 用 学 生 信 息 管 理 系 统");
 		jLabel_welcomeTitle.setBounds(new Rectangle(180, 130, 600, 33));
@@ -226,16 +225,21 @@ public class MainFrame extends JFrame {
 			// 不隐藏任何功能
 		}
 		// 2为普通用户
-		if (level.equals("2")) {
-			// 隐藏添加用户和删除用户的功能
+		else if (level.equals("2")) {
+			// 隐藏部分功能
 			this.jMenuItem_userSignUp.setVisible(false);
 			this.jMenuItem_userDelete.setVisible(false);
+			this.jMenuItem_stuInfoSignUp.setVisible(false);
+			this.jMenuItem_classInput.setVisible(false);
+			this.jMenuItem_departInput.setVisible(false);
+			this.jMenuItem_courceInput.setVisible(false);
+			this.jMenuItem_scoreInput.setVisible(false);
 		}
 	}
 
 	// 关于信息
 	public void jMenuItem_about_actionPerformed(ActionEvent e) {
-		jOptionPane_LoginFeedback.showMessageDialog(this, "学生信息管理系统\n版本号：1.0\n作   者：谢孟辉\n邮   箱：hui@huihut.com\n博   客：huihut.com\n本程序仅供学习使用",
+		jOptionPane_LoginFeedback.showMessageDialog(this, "学生信息管理系统\n版本号：1.0\n作   者：谢孟辉\n邮   箱：huihut@outlook.com\n博   客：blog.huihut.com\n本程序仅供学习使用",
 				"关于", jOptionPane_LoginFeedback.INFORMATION_MESSAGE);
 	}
 

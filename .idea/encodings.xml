@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/Class/ClassAddFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Class/ClassChange.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Class/ClassManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Cource/CourceManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Depart/DepartManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Score/ScoreManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Student/StudentChange.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Student/StudentInfoAddFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Student/StudentManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/User/UserAddFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/User/UserPasswordFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/db/dbConn.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/stuManager/LoginClass.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/stuManager/LoginFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/stuManager/MainFrame.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

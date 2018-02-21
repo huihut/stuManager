@@ -3,6 +3,7 @@ package Score;
 import com.borland.jbcl.layout.*;
 
 import db.dbConn;
+import stuManager.MainFrame;
 
 import javax.swing.*;
 import java.sql.ResultSet;
@@ -63,7 +64,7 @@ public class ScoreManager extends JFrame {
 		jButton1.setText("修   改");
 		jButton1.addActionListener(new ScoreF_jButton1_actionAdapter(this));
 		jButton2.setFont(new java.awt.Font("Dialog", Font.PLAIN, 18));
-		jButton2.setText("退   出");
+		jButton2.setText("返   回");
 		jButton2.addActionListener(new ScoreF_jButton2_actionAdapter(this));
 		jPanel1.setLayout(xYLayout2);
 		jPanel1.setBorder(BorderFactory.createEtchedBorder());
@@ -96,6 +97,18 @@ public class ScoreManager extends JFrame {
 		jPanel1.add(jButton_sort, new XYConstraints(147, 15, 80, 25));
 		jPanel1.add(jButton_average, new XYConstraints(287, 15, 80, 25));
 		jPanel1.add(jButton_failure, new XYConstraints(419, 15, 80, 25));
+
+		// 用户等级判断
+		// 1为管理员
+		if (MainFrame.level.equals("1")) {
+			// 不隐藏任何功能
+		}
+		// 2为普通用户
+		else if (MainFrame.level.equals("2")) {
+			// 隐藏部分功能
+			jButton1.setVisible(false);
+			jButton6.setVisible(false);
+		}
 
 		// 设置默认查找所有成绩
 		sql = "select * from tb_score ";
@@ -160,7 +173,7 @@ public class ScoreManager extends JFrame {
 		this.dispose();
 	}
 
-	// 单次点击打印对成绩编号进行升序排序
+	// 单次点击打印对学号进行升序排序
 	// 双次点击打印对学号进行升序排序
 	public void jButton_print_actionPerformed(ActionEvent e) {
 		i_print++;
@@ -173,7 +186,7 @@ public class ScoreManager extends JFrame {
 	}
 
 	// 单次点击排序对成绩进行降序排序
-	// 双次点击排序进行升序排序
+	// 双次点击排序对成绩进行升序排序
 	public void jButton_sort_actionPerformed(ActionEvent e) {
 		i_sortDesc++;
 		if (i_sortDesc % 2 == 1) {

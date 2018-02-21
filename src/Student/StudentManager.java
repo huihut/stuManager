@@ -10,6 +10,8 @@ import com.borland.jbcl.layout.XYLayout;
 import db.dbConn;
 
 import com.borland.jbcl.layout.*;
+import stuManager.MainFrame;
+
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.*;
@@ -143,6 +145,18 @@ public class StudentManager extends JFrame {
 		this.getContentPane().add(jButton5, new XYConstraints(225, 545, 95, 34));
 		this.getContentPane().add(jButton6, new XYConstraints(525, 545, 95, 34));
 		this.getContentPane().add(jButton7, new XYConstraints(375, 545, 95, 34));
+
+		// 用户等级判断
+		// 1为管理员
+		if (MainFrame.level.equals("1")) {
+			// 不隐藏任何功能
+		}
+		// 2为普通用户
+		else if (MainFrame.level.equals("2")) {
+			// 隐藏部分功能
+			jButton5.setVisible(false);
+			jButton7.setVisible(false);
+		}
 
 		// 查找所有学生
 		sql = "select * from tb_student";
@@ -329,7 +343,7 @@ class StudentC_jButton2_actionAdapter implements ActionListener {
 	}
 }
 
-class StudentC_jButton1_actionAdapter implements ActionListener {
+class 	StudentC_jButton1_actionAdapter implements ActionListener {
 	private StudentManager adaptee;
 
 	StudentC_jButton1_actionAdapter(StudentManager adaptee) {
