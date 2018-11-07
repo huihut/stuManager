@@ -31,12 +31,12 @@
 
 ## 运行截图
 
-![stuManagerScreenshot](http://ojlsgreog.bkt.clouddn.com/stuManageScreenshot.jpg)
+![stuManagerScreenshot](https://huihut-img.oss-cn-shenzhen.aliyuncs.com/stuManageScreenshot.jpg)
 
 ## 系统功能结构
 
-![SystemFunctionStructure](http://ojlsgreog.bkt.clouddn.com/SystemFunctionStructure.jpg)
+![SystemFunctionStructure](https://huihut-img.oss-cn-shenzhen.aliyuncs.com/SystemFunctionStructure.jpg)
 
 ## 数据库结构（E-R图）
 
-![DatabaseStructure](http://ojlsgreog.bkt.clouddn.com/DatabaseERDiagram.png)
+![DatabaseStructure](https://huihut-img.oss-cn-shenzhen.aliyuncs.com/DatabaseERDiagram.png)
